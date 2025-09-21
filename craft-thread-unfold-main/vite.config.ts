@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
+// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
@@ -15,7 +16,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: "dist", // 👈 Vercel looks for this
+    outDir: "dist", // Vercel expects this folder
   },
-  base: "/", // 👈 ensures assets load correctly on Vercel
+  base: "/", // ensures assets load correctly on deployment
 }));
